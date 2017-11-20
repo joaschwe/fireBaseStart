@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import {IonicPage, NavController} from 'ionic-angular';
 import {DataProvider} from "../../providers/data/data";
+import {DetailPage} from "../detail/detail";
+import {CreateItemPage} from "../create-item/create-item";
 
 @IonicPage()
 
@@ -10,21 +12,16 @@ import {DataProvider} from "../../providers/data/data";
 })
 export class HomePage {
 
-  speakers:any;
-
   constructor(public navCtrl: NavController, public dataService:DataProvider) {
 
   }
 
-  ionViewDidLoad(){
+    goToList():void {
+      this.navCtrl.push('DetailPage');
+    }
 
-    this.speakers = this.dataService.speakerList;
-
-  }
-
-  itemClicked(speaker):void{
-    this.navCtrl.push('DetailPage', speaker);
-    console.log(speaker);
-  }
+    goToCreate() {
+      this.navCtrl.push('CreateItemPage');
+    }
 
 }

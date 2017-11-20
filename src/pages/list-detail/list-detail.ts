@@ -3,7 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import {DataProvider} from "../../providers/data/data";
 
 /**
- * Generated class for the DetailPage page.
+ * Generated class for the ListDetailPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -11,23 +11,18 @@ import {DataProvider} from "../../providers/data/data";
 
 @IonicPage()
 @Component({
-  selector: 'page-detail',
-  templateUrl: 'detail.html',
+  selector: 'page-list-detail',
+  templateUrl: 'list-detail.html',
 })
-export class DetailPage {
+export class ListDetailPage {
 
-  speakers: any;
+  speakers:any;
 
-  constructor(public navCtrl: NavController, public dataService:DataProvider) {
-
+  constructor(public navCtrl: NavController, public navParams: NavParams, public dataService:DataProvider) {
   }
 
   ionViewDidLoad() {
-      this.speakers = this.dataService.speakerList;
-  }
 
-  itemClicked(item):void{
-    this.navCtrl.push('ListDetailPage', item);
   }
 
 }

@@ -10,16 +10,7 @@
 
   <h1>Choose an option</h1>
 
-  <button ion-button full color="primary">Create Item</button>
-  <button ion-button full color="secondary" (click)="listClicked">View List</button>
-
-  <!--<ion-list *ngFor="let speaker of speakers | async">-->
-    <!--<ion-list-header>-->
-      <!--{{speaker.listHeader}}-->
-    <!--</ion-list-header>-->
-    <!--<button ion-item *ngFor="let speakerItem of speaker.speakerInfo" (click)="itemClicked(speakerItem)">-->
-      <!--{{speakerItem.name}}-->
-    <!--</button>-->
-  <!--</ion-list>-->
+  <button ion-button full color="primary" (click)="goToCreate()">Create Item</button>
+  <button ion-button full color="secondary" (click)="goToList()">View List</button>
 
 </ion-content>

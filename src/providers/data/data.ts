@@ -13,7 +13,7 @@ import {Observable} from "rxjs/Observable";
 export class DataProvider {
 
   speakerListRef: AngularFirestoreCollection<any>;
-  speakerList: Observable[any];
+  speakerList: Observable<any[]>;
   lists: any;
 
   constructor(private afs:AngularFirestore) {
